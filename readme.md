@@ -1,0 +1,28 @@
+## 目录结构
++ /api_test
+    +  一些测试调用大模型的脚本
++ /cover_F&U_classification_model
+    + 功能区单位区分类的模型文件
++ /cover_F&U_detection_model
+    + 功能区单位区检测的模型文件
++ /cover_recognition_model
+    + 井盖检测的模型文件
++ /jpg_init_test
+    + 示例图片
+-----------
++ construction_recognition.py
+    + 施工检测
++ cover_F&U_classification.py
+    + 功能区和单位区分类
++ cover_F&U_detection.py
+    + 功能区和单位区检测
++ cover_recognition.py
+    + 井盖检测
++ defective_manhole_recognition.py
+    + 病害井识别
++ init.py
+    + 初始化前向图和下向图的.json文件
++ recongition&detection_test.ipynb
+    + 检查.json中的坐标范围是否与原图匹配
++ road_damage_recognition.py
+    + 道路破损检测
