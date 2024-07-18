@@ -51,8 +51,9 @@ def process_directory(path):
                             "timestamp": json_data["timestamp"],
                             "gps": json_data["gps"],
                             "manhole_id": manhole_count,
-                            "functional": {},
-                            "unit": {}
+                            "defective_manhole": -1,
+                            "functional": [],
+                            "unit": []
                         }
                         cropped_json_file_path = cropped_img_path.replace('.jpg', '.json')
                         with open(cropped_json_file_path, 'w') as cropped_json_file:

@@ -6,6 +6,26 @@
         "longitude": 0
     },
     "manhole_id": 1,
-    "functional": {},
-    "unit": {}
+    "functional": [
+        {
+            "class": -1,
+            "coordinates": {
+                "x1": 773,
+                "y1": 1030,
+                "x2": 1285,
+                "y2": 1511
+            }
+        }
+    ],
+    "unit": [
+        {
+            "class": -1,
+            "coordinates": {
+                "x1": 225,
+                "y1": 588,
+                "x2": 841,
+                "y2": 1981
+            }
+        }
+    ]
 }
