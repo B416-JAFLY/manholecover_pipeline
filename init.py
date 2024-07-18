@@ -13,10 +13,11 @@ def get_gps_info(exif_data):
         return {"latitude": latitude, "longitude": longitude}
     return {"latitude": 0, "longitude": 0}
 
-def process_image(file):
+def process_image(file, images_path):
     filename, ext = os.path.splitext(file)
     timestamp = filename.split('_')[0]
-    img = Image.open(file)
+    img_path = os.path.join(images_path, file)
+    img = Image.open(img_path)
     
     # 初始化GPS信息为默认值
     gps_info = {"latitude": 0, "longitude": 0}
@@ -45,14 +46,15 @@ def process_image(file):
     else:
         return
 
-    json_filename = filename + '.json'
+    json_filename = os.path.join(images_path, filename + '.json')
     with open(json_filename, 'w') as json_file:
         json.dump(data, json_file, indent=2)
 
-def main():
-    for file in os.listdir('.'):
+def main(images_path):
+    for file in os.listdir(images_path):
         if file.endswith('.jpg'):
-            process_image(file)
+            process_image(file, images_path)
 
 if __name__ == "__main__":
-    main()
+    images_path = '/home/u2021213565/jupyterlab/alibaba_qwen/jpg_init_test'  # 这里设置你想要处理的图片目录
+    main(images_path)
