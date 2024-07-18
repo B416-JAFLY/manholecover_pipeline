@@ -13,19 +13,30 @@ def get_gps_info(exif_data):
         return {"latitude": latitude, "longitude": longitude}
     return {"latitude": 0, "longitude": 0}
 
+def get_datetime_info(exif_data):
+    if piexif.ExifIFD.DateTimeOriginal in exif_data['Exif']:
+        datetime_str = exif_data['Exif'][piexif.ExifIFD.DateTimeOriginal].decode('utf-8')
+        dt = datetime.strptime(datetime_str, '%Y:%m:%d %H:%M:%S')
+        return dt.strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z'
+    return None
+
 def process_image(file, images_path):
     filename, ext = os.path.splitext(file)
-    timestamp = filename.split('_')[0]
     img_path = os.path.join(images_path, file)
     img = Image.open(img_path)
     
     # 初始化GPS信息为默认值
     gps_info = {"latitude": 0, "longitude": 0}
+    timestamp = None
     
     # 尝试读取EXIF数据
     if 'exif' in img.info:
         exif_data = piexif.load(img.info['exif'])
         gps_info = get_gps_info(exif_data)
+        timestamp = get_datetime_info(exif_data)
+
+    # if not timestamp:
+    #     timestamp = filename.split('_')[0]
 
     if file.endswith('_ahead.jpg'):
         data = {
