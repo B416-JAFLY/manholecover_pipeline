@@ -32,7 +32,8 @@ def process_image(file, images_path):
             "filename": filename,
             "timestamp": timestamp,
             "gps": gps_info,
-            "construction": -1
+            "construction": -1,
+            "road_damage": -1
         }
     elif file.endswith('_below.jpg'):
         data = {
@@ -40,6 +41,7 @@ def process_image(file, images_path):
             "timestamp": timestamp,
             "gps": gps_info,
             "quantity": -1,
+            "construction": -1,
             "road_damage": -1,
             "manhole": []
         }

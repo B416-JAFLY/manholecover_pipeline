@@ -32,19 +32,35 @@ def process_images_in_directory_road_damage(directory_path):
         result = simple_multimodal_conversation_call_road_damage(image_path)
         
         if result is not None:
-            json_filename = os.path.splitext(filename)[0] + '.json'
-            json_path = os.path.join(directory_path, json_filename)
+            # 处理_below.json文件
+            below_json_filename = os.path.splitext(filename)[0] + '.json'
+            below_json_path = os.path.join(directory_path, below_json_filename)
             
-            if os.path.exists(json_path):
-                with open(json_path, 'r') as json_file:
+            if os.path.exists(below_json_path):
+                with open(below_json_path, 'r') as json_file:
                     data = json.load(json_file)
             else:
                 data = {}
 
             data['road_damage'] = result
 
-            with open(json_path, 'w') as json_file:
+            with open(below_json_path, 'w') as json_file:
                 json.dump(data, json_file, indent=4)
+
+            # 处理_ahead.json文件
+            ahead_json_filename = below_json_filename.replace("_below.json", "_ahead.json")
+            ahead_json_path = os.path.join(directory_path, ahead_json_filename)
+            
+            if os.path.exists(ahead_json_path):
+                with open(ahead_json_path, 'r') as json_file:
+                    ahead_data = json.load(json_file)
+            else:
+                ahead_data = {}
+
+            ahead_data['road_damage'] = result
+
+            with open(ahead_json_path, 'w') as json_file:
+                json.dump(ahead_data, json_file, indent=4)
 
 images_directory = "/home/u2021213565/jupyterlab/alibaba_qwen/jpg_init_test"
 process_images_in_directory_road_damage(images_directory)
