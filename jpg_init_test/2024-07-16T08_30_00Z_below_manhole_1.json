@@ -8,7 +8,7 @@
     "manhole_id": 1,
     "functional": [
         {
-            "class": -1,
+            "class": "1-闸",
             "coordinates": {
                 "x1": 773,
                 "y1": 1030,
@@ -19,7 +19,7 @@
     ],
     "unit": [
         {
-            "class": -1,
+            "class": "0-昌平自来水",
             "coordinates": {
                 "x1": 225,
                 "y1": 588,
