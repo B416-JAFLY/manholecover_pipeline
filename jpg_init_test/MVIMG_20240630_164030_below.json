@@ -1,0 +1,22 @@
+{
+    "filename": "MVIMG_20240630_164030_below",
+    "timestamp": "2024-06-30T16:40:18.000Z",
+    "gps": {
+        "latitude": 39.957925,
+        "longitude": 116.34904444444444
+    },
+    "quantity": 1,
+    "construction": -1,
+    "road_damage": -1,
+    "manhole": [
+        {
+            "id": 1,
+            "coordinates": {
+                "x1": 477,
+                "y1": 1599,
+                "x2": 1928,
+                "y2": 2786
+            }
+        }
+    ]
+}

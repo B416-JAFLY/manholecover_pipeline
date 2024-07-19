@@ -1,11 +1,12 @@
 {
     "filename": "2024-07-16T08_30_00Z_below_manhole_1",
-    "timestamp": "2024-07-16T08",
+    "timestamp": null,
     "gps": {
         "latitude": 0,
         "longitude": 0
     },
     "manhole_id": 1,
+    "defective_manhole": -1,
     "functional": [
         {
             "class": "1-闸",

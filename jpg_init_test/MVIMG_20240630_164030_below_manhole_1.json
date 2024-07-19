@@ -1,0 +1,32 @@
+{
+    "filename": "MVIMG_20240630_164030_below_manhole_1",
+    "timestamp": "2024-06-30T16:40:18.000Z",
+    "gps": {
+        "latitude": 39.957925,
+        "longitude": 116.34904444444444
+    },
+    "manhole_id": 1,
+    "defective_manhole": -1,
+    "functional": [
+        {
+            "class": "1-雨",
+            "coordinates": {
+                "x1": 638,
+                "y1": 412,
+                "x2": 867,
+                "y2": 611
+            }
+        }
+    ],
+    "unit": [
+        {
+            "class": "0-北京排水集团",
+            "coordinates": {
+                "x1": 208,
+                "y1": 117,
+                "x2": 808,
+                "y2": 630
+            }
+        }
+    ]
+}
