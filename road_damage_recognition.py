@@ -62,5 +62,5 @@ def process_images_in_directory_road_damage(directory_path):
             with open(ahead_json_path, 'w') as json_file:
                 json.dump(ahead_data, json_file, indent=4)
 
-images_directory = "/home/u2021213565/jupyterlab/alibaba_qwen/jpg_init_test"
+images_directory = "jpg_init_test"
 process_images_in_directory_road_damage(images_directory)

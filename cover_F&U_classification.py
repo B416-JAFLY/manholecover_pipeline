@@ -6,8 +6,8 @@ from mmpretrain import get_model
 from mmpretrain import ImageClassificationInferencer
 
 # 加载分类模型
-model_unit = get_model("/home/u2021213565/jupyterlab/alibaba_qwen/cover_F&U_classification_model/vit-base-p16_1xb128-coslr-ft_custom_unit.py", pretrained="/home/u2021213565/jupyterlab/alibaba_qwen/cover_F&U_classification_model/unit.pth")
-model_funct = get_model("/home/u2021213565/jupyterlab/alibaba_qwen/cover_F&U_classification_model/vit-base-p16_1xb128-coslr-ft_custom_funct.py", pretrained="/home/u2021213565/jupyterlab/alibaba_qwen/cover_F&U_classification_model/funct.pth")
+model_unit = get_model("cover_F&U_classification_model/vit-base-p16_1xb128-coslr-ft_custom_unit.py", pretrained="cover_F&U_classification_model/unit.pth")
+model_funct = get_model("cover_F&U_classification_model/vit-base-p16_1xb128-coslr-ft_custom_funct.py", pretrained="cover_F&U_classification_model/funct.pth")
 
 # 加载推理器
 inferencer_unit = ImageClassificationInferencer(model_unit)
@@ -72,7 +72,7 @@ def process_directory(path):
         print(f"Updated JSON file: {json_file_path}")
 
 # 指定目录路径
-directory_path = "/home/u2021213565/jupyterlab/alibaba_qwen/jpg_init_test"
+directory_path = "jpg_init_test"
 
 # 处理目录
 process_directory(directory_path)

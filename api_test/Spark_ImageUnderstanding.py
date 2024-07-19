@@ -13,9 +13,9 @@ from wsgiref.handlers import format_date_time
 import websocket  # 使用websocket_client
 
 
-appid = "766b2719"    #填写控制台中获取的 APPID 信息
-api_secret = "NTJjYzAyYmFjYWVjYjI4ZjRkNDFhNzQ0"   #填写控制台中获取的 APISecret 信息
-api_key ="43caa72f54795f6fb4d57156223010b3"    #填写控制台中获取的 APIKey 信息
+appid = ""    #填写控制台中获取的 APPID 信息
+api_secret = ""   #填写控制台中获取的 APISecret 信息
+api_key =""    #填写控制台中获取的 APIKey 信息
 imagedata = open("./img_1.png",'rb').read()
 
 

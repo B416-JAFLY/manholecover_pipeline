@@ -69,5 +69,5 @@ def main(images_path):
             process_image(file, images_path)
 
 if __name__ == "__main__":
-    images_path = '/home/u2021213565/jupyterlab/alibaba_qwen/jpg_init_test'  # 这里设置你想要处理的图片目录
+    images_path = 'jpg_init_test'  # 这里设置你想要处理的图片目录
     main(images_path)

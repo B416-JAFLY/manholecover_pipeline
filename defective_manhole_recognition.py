@@ -51,3 +51,6 @@ def process_images_in_directory_defective_manhole(directory_path):
 
             with open(json_path, 'w') as json_file:
                 json.dump(data, json_file, indent=4)
+
+images_directory = "jpg_init_test"
+process_images_in_directory_defective_manhole(images_directory)

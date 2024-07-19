@@ -4,7 +4,7 @@ import os
 import json
 from tqdm import tqdm
 
-#export DASHSCOPE_API_KEY="sk-d181674e365c45fd8894065f8a1ed2ad"
+#export DASHSCOPE_API_KEY="your_api_key"
 
 def simple_multimodal_conversation_call_defective_manhole(image_path):
     messages = [
