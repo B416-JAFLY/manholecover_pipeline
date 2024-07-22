@@ -1,10 +1,10 @@
 {
-  "filename": "2024-07-16T08_30_00Z_ahead",
-  "timestamp": null,
-  "gps": {
-    "latitude": 0,
-    "longitude": 0
-  },
-  "construction": -1,
-  "road_damage": -1
+    "filename": "2024-07-16T08_30_00Z_ahead",
+    "timestamp": null,
+    "gps": {
+        "latitude": 0,
+        "longitude": 0
+    },
+    "construction": "0",
+    "road_damage": "1"
 }

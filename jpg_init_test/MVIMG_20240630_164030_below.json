@@ -6,8 +6,8 @@
         "longitude": 116.34904444444444
     },
     "quantity": 1,
-    "construction": -1,
-    "road_damage": -1,
+    "construction": "1",
+    "road_damage": "1",
     "manhole": [
         {
             "id": 1,

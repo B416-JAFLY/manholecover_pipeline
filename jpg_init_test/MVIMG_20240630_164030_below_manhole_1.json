@@ -6,7 +6,7 @@
         "longitude": 116.34904444444444
     },
     "manhole_id": 1,
-    "defective_manhole": -1,
+    "defective_manhole": "1",
     "functional": [
         {
             "class": "1-雨",
